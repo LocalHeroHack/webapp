@@ -34,3 +34,5 @@ jobs:
         port: 22
         source: 'webapp/build/*'
         target: '/var/www/getlocals.se/html'
+        strip_components: 2
+        rm: true
