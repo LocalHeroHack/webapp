@@ -30,7 +30,7 @@ jobs:
       with:
         host: 'getlocals.se'
         username: 'g112358_fn'
-        password: ${{ secrets.SSH_PASSWORD }}
+        key: ${{ secrets.SSH_KEY }}
         port: 22
         source: 'webapp/build/*'
         target: '/var/www/getlocals.se/html'
