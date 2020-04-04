@@ -33,4 +33,4 @@ jobs:
         app-name: 'localfarmer-webapp'
         slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_526d8ef16c26413d8ce457566d699a54 }}
-        package: ./webapp/build
+        package: ./webapp
