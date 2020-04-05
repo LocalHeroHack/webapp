@@ -34,14 +34,18 @@ function Cart() {
           >
             Close
           </span>
-          {cart.products.map((product) => {
-            return (
-              <div>
-                <h3>{product.title}</h3>
-                <p>{product.price}</p>
-              </div>
-            );
-          })}
+          {!!cart.product.length ? (
+            cart.products.map((product) => {
+              return (
+                <div>
+                  <h3>{product.title}</h3>
+                  <p>{product.price}</p>
+                </div>
+              );
+            })
+          ) : (
+            <div>Cart is empty</div>
+          )}
         </div>
       )}
     </div>

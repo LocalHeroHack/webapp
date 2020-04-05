@@ -3,17 +3,21 @@ import "./App.css";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Home from "./components/Home";
+import SelectCity from "./components/SelectCity";
 import About from "./components/About";
 import Farmers from "./components/Farmers";
 
 function App() {
   return (
     <Router>
-      <div>
+      <div className="app">
         <nav>
           <ul>
             <li>
-              <Link to="/">Home</Link>
+              <Link to="/">Change postal code</Link>
+            </li>
+            <li>
+              <Link to="/home">Home</Link>
             </li>
             <li>
               <Link to="/about">About</Link>
@@ -33,8 +37,11 @@ function App() {
           <Route path="/farmers">
             <Farmers />
           </Route>
-          <Route path="/">
+          <Route path="/home§">
             <Home />
+          </Route>
+          <Route path="/">
+            <SelectCity />
           </Route>
         </Switch>
       </div>
