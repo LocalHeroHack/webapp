@@ -84,7 +84,7 @@ nav ul li {
   padding: 20px;
 }
 .usp .img {
-  width: 200px;
-  height: 200px;
-  background-size: cover;
+  width: 150px;
+  height: 100px;
+  background-repeat: no-repeat;
 }

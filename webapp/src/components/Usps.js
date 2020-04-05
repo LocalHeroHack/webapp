@@ -14,15 +14,7 @@ function About() {
         {data.usps.map((usp) => {
           return (
             <div className="usp">
-              {usp.image && (
-                <div
-                  className="img"
-                  style={{
-                    backgroundImage: "url(" + STRAPI_URL + usp.image.url + ")",
-                  }}
-                  alt="usp"
-                ></div>
-              )}
+              {usp.image && <img src={STRAPI_URL + usp.image.url} />}
               <h3>{usp.heading}</h3>
             </div>
           );
