@@ -15,7 +15,7 @@ function About() {
           return (
             <div className="usp">
               {usp.image && <img src={STRAPI_URL + usp.image.url} />}
-              <h3>{usp.heading}</h3>
+              <h3>{usp.description}</h3>
             </div>
           );
         })}
