@@ -3,8 +3,6 @@ import "./App.css";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Home from "./components/Home";
-import SelectCity from "./components/SelectCity";
-import About from "./components/About";
 import Farmers from "./components/Farmers";
 
 function App() {
@@ -14,16 +12,16 @@ function App() {
         <nav>
           <ul>
             <li>
-              <Link to="/">Change postal code</Link>
-            </li>
-            <li>
-              <Link to="/home">Home</Link>
-            </li>
-            <li>
-              <Link to="/about">About</Link>
+              <Link to="/">Home</Link>
             </li>
             <li>
               <Link to="/farmers">Farmers</Link>
+            </li>
+            <li>
+              <Link to="/">Background</Link>
+            </li>
+            <li>
+              <Link to="/">Contact</Link>
             </li>
           </ul>
         </nav>
@@ -31,17 +29,11 @@ function App() {
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
         <Switch>
-          <Route path="/about">
-            <About />
-          </Route>
           <Route path="/farmers">
             <Farmers />
           </Route>
-          <Route path="/home§">
-            <Home />
-          </Route>
           <Route path="/">
-            <SelectCity />
+            <Home />
           </Route>
         </Switch>
       </div>
