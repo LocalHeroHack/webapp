@@ -17,16 +17,7 @@ class Farmers extends Component {
   }
 
   reFetch() {
-    var myHeaders = new Headers()
-    myHeaders.append("api-key", "0776D72F8B5B9A97D475B08F1090FFF5")
-
-    var requestOptions = {
-      method: 'GET',
-      headers: myHeaders,
-      redirect: 'follow'
-    }
-
-    fetch("https://localfarmer-search-dev.search.windows.net/indexes/cosmosdb-index/docs?api-version=2019-05-06&search=filter%3ApostalCode%3A442%2090", requestOptions)
+    fetch("https://getlocals.se/data&search=filter%3ApostalCode%3A442%2090")
       .then(response => response.text())
       .then(result => {
         console.log(result)
