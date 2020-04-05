@@ -19,7 +19,7 @@ function SelectCity() {
 
   return (
     <div
-      className="select-city br10 shadow1"
+      className="select-city br10 shadow1 pa2 bg-white"
       style={{ width: "300px", textAlign: "right" }}
     >
       <Select

@@ -8,7 +8,7 @@ function About() {
   return isLoading ? (
     <div>Loading...</div>
   ) : (
-    <div className="usps mb2 br10 shadow1">
+    <div className="usps mb2 br10 shadow1 bg-white pa2">
       <h1 className="tc">{data.title}</h1>
       <div className="flex">
         {data.usps.map((usp) => {
