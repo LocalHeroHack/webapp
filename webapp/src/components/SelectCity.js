@@ -1,9 +1,21 @@
 import React from "react";
 import Select from "react-select";
 import { Link } from "react-router-dom";
+import useFetch from "react-fetch-hook";
 
 function SelectCity() {
-  const options = [{ value: "442 90", label: "Kungälv" }];
+  const { isLoading, data } = useFetch("https://getlocals.se/data&facet=city");
+
+  if (isLoading) return <div>Loading...</div>;
+  const options = [];
+  data.value.forEach((farmer) => {
+    if (!options.find((option) => farmer.postalCode === option.value)) {
+      options.push({
+        value: farmer.postalCode,
+        label: `${farmer.postalCode} ${farmer.city}`,
+      });
+    }
+  });
 
   return (
     <div className="vmin100 w100 flex align-center justify-center">

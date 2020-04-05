@@ -7,7 +7,7 @@ class Farmers extends Component {
     this.state = {
       data: [],
       loaded: false,
-      placeholder: "Loading...",
+      //placeholder: "Loading...",
     };
   }
 
