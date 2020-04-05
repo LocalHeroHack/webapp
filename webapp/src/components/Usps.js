@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 import useFetch from "react-fetch-hook";
 import { STRAPI_URL } from "../constants";
 
@@ -14,7 +14,7 @@ function About() {
         {data.usps.map((usp) => {
           return (
             <div className="usp">
-              {usp.image && <img src={STRAPI_URL + usp.image.url} />}
+              {usp.image && <img src={STRAPI_URL + usp.image.url} alt="usp" />}
               <h3>{usp.description}</h3>
             </div>
           );

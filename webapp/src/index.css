@@ -22,10 +22,13 @@ nav {
   top: 0;
   right: 0;
 }
-
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
 nav ul {
   display: flex;
-  list-style: none;
   justify-content: flex-end;
   margin-right: 100px;
 }
@@ -76,6 +79,15 @@ nav ul li {
 .pa2 {
   padding: 8px;
 }
+.pa3 {
+  padding: 16px;
+}
+.realative {
+  position: relative;
+}
+.absolute {
+  position: absolute;
+}
 .bg-white {
   background: white;
 }
@@ -87,4 +99,15 @@ nav ul li {
   width: 150px;
   height: 100px;
   background-repeat: no-repeat;
+}
+
+.tab {
+  width: 250px;
+  line-height: 30px;
+  border-radius: 10px 10px 0 0;
+  border: 1px solid black;
+}
+
+.tab.active {
+  border-bottom: none;
 }
