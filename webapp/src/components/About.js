@@ -9,20 +9,23 @@ function About() {
     <div>Loading...</div>
   ) : (
     <div className="vmin100 w100 flex align-center justify-center">
-      {data.map((usp) => {
-        return (
-          <div className="usp">
-            <div
-              className="img"
-              style={{
-                backgroundImage: "url(" + STRAPI_URL + usp.image.url + ")",
-              }}
-              alt="usp"
-            ></div>
-            <h3>{usp.heading}</h3>
-          </div>
-        );
-      })}
+      <div className="usps flex">
+        {data.map((usp) => {
+          return (
+            <div className="usp">
+              <div
+                className="img"
+                style={{
+                  backgroundImage: "url(" + STRAPI_URL + usp.image.url + ")",
+                }}
+                alt="usp"
+              ></div>
+              <h3>{usp.heading}</h3>
+              <p>{usp.description}</p>
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 }

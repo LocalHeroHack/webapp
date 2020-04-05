@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(to bottom, #a9db80 0%, #96c56f 100%);
 }
 
 code {
@@ -43,12 +44,17 @@ nav ul li {
 .justify-center {
   justify-content: center;
 }
+.usps {
+  border-radius: 10px;
+  box-shadow: 10px 10px 42px 0px rgba(0, 0, 0, 0.3);
+}
 
 .usp {
   text-align: center;
+  padding: 20px;
 }
 .usp .img {
-  width: 300px;
-  height: 300px;
+  width: 200px;
+  height: 200px;
   background-size: cover;
 }
